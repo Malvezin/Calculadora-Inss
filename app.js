@@ -1,8 +1,6 @@
 const inputSalario = document.getElementById("inputSalario")
 const resultado = document.getElementById("resultado")
 const button = document.getElementById("button")
-const pA = document.getElementById("pA")
-const vD = document.getElementById("vD")
 
 function calcularINSS() {
     //pegarValor
@@ -21,7 +19,7 @@ function calcularINSS() {
     const valorDesconto = salario *(percentual / 100);
 
     //exibeValor
-    resultado.innerText = `salario: R$ ${salario.toFixed(2)} | Percentual: ${percentual.toFixed(2)}`
+    resultado.innerText = `Salario: R$ ${salario.toFixed(2)} | Percentual: ${percentual.toFixed(2)} | Desconto: R$ ${valorDesconto.toFixed(2)}`; 
 }
 
-button.addEventListener("click", resultado)
+button.addEventListener("click", calcularINSS)
